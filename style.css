@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 /* Reset styles */
 *, *::after, *::before {
     padding: 0;
@@ -16,8 +18,14 @@ body {
     min-height: 100vh;
     background-color: var(--dark-color);
     overflow: hidden;
-    perspective: 1000px;
-    font-family: 'Arial', sans-serif;
+    /* Sembunyikan scrollbar di desktop */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+/* Sembunyikan scrollbar di Webkit (Chrome, Safari, Opera) */
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* Message Container Styles */
@@ -78,14 +86,15 @@ body {
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #fff0f5, #ffe4e6);
+    background: linear-gradient(135deg, #fff, #ffe4ef 80%);
     margin: 10% auto;
     padding: 30px;
     border-radius: 20px;
     width: 90%;
     max-width: 500px;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 40px 10px #ffb6c1;
+    border: 2px solid #ff69b4;
     position: relative;
     animation: modalSlideIn 0.4s ease-out;
 }
@@ -106,21 +115,25 @@ body {
 }
 
 .modal-content h3 {
-    color: #d63384;
-    margin-bottom: 20px;
-    font-size: 24px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #d63384; /* pink tua, lebih kontras */
+    margin-bottom: 1rem;
 }
 
 .modal-content p {
-    color: #495057;
-    line-height: 1.6;
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+    font-size: 1.3rem;
+    color: #495057; /* abu gelap, mudah dibaca */
+    margin-bottom: 1rem;
+    text-shadow: none;
 }
 
 .modal-content small {
-    color: #6c757d;
-    font-style: italic;
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    color: #d63384; /* pink tua */
+    opacity: 0.7;
 }
 
 /* Night background */
@@ -1232,23 +1245,31 @@ body {
 }
 
 .salwa-greeting {
-    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    color: #fff;
+    text-shadow:
+        0 0 2px #fff,
+        0 2px 12px #fff;
+    text-align: center;
+    position: fixed;
     top: 38px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1001;
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.6rem;
-    font-weight: normal;
-    letter-spacing: 1px;
-    color: #5ef1ff;
-    text-shadow:
-        0 0 6px rgba(94, 241, 255, 0.8),
-        0 0 12px rgba(94, 241, 255, 0.6),
-        0 0 20px rgba(94, 241, 255, 0.4);
-    animation: greetingFadeIn 1.2s cubic-bezier(.77,0,.18,1) both;
-    text-align: center;
+    z-index: 3000;
     user-select: none;
+    animation: greetingFadeIn 1.2s cubic-bezier(.77,0,.18,1) both;
+    font-size: 4.5rem;
+}
+
+/* Untuk iOS/mobile */
+@media only screen and (max-width: 600px), 
+       only screen and (max-device-width: 600px),
+       only screen and (max-width: 430px) and (orientation: portrait) {
+    .salwa-greeting {
+        font-size: 32.5px;
+        top: 75px;
+    }
 }
 
 @keyframes greetingFadeIn {

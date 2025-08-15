@@ -30,7 +30,7 @@ function showMessage() {
 
     // Pesan khusus untuk Salwa
     titleElement.textContent = "Pesan Untuk Salwa";
-    typeWriterEffect(textElement, "Haiii Salwa! Seperti bunga yang bermekaran di malam hari ini, semoga harimu selalu dipenuhi kebahagiaan kapanpun dan dimanapun kamu berada yaa! Terima kasih sudah menjadi motivasi dan inspirasi di belakangan hariku inii. Aku berharap kedepannya kamu selalu memegang dunia di genggamanmu, atau setidaknya, tidak membiarkan dunia menggenggam erat dirimu hingga tanganmu lelah untuk menggenggam tangan orang lain. Maafkan jika ada beberapa hal yang baru kusadari tentangmu dan itu menyakiti perasaanmu yaa! Aku selalu ingin mengenal dirimu kok. Jadiii, just be yourself kalau didepanku. Jadi salwa yang mencintai dirinya sendiri dan jadi salwa yang mencintai diriku jugak HAHAHAHA",
+    typeWriterEffect(textElement, "Haiii Salwa! Kayak bunga yang bermekaran di malam hari ini, semoga hari-harimu selalu dipenuhi kebahagiaan kapanpun dan dimanapun kamu berada yaa! Thank youu sudah menjadi motivasi dan inspirasi di belakangan hariku inii. Aku doakan kedepannya kamu selalu memegang dunia di genggamanmu, atau setidaknya, enggak ngebiarin dunia ngegenggam erat dirimu hingga tanganmu lelah untuk menggenggam tangan orang lain. Maafin aku kalau ada beberapa hal yang baru kusadari dan ternyata itu nyakitin perasaan kamu yaa! Aku selalu ingin mengenal dirimu kok. Jadiii, just be yourself kalau didepanku yaa. Jadi salwa yang mencintai dirinya sendiri dan mencintai diriku HAHAHAHA",
     );
     senderElement.textContent = "- Someone who adores you! -";
 
